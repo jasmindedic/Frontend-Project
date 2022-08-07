@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* #dfe6e9 */
+
+/* Navigation bar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav-links-1 ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0.7rem;
+}
+
+.navbar .nav-links-1 a {
+    text-decoration: none;
+    color: #b2bec3;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.nav-links-1 li:hover {
+    transform: scale(1.4);
+    transition: scale 0.4s ease-in-out 0.2s;
+}
+
+
+/* Navigation links 2 */
+.navbar .nav-links-2 ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0.7rem;
+}
+
+.navbar .nav-links-2 a {
+    text-decoration: none;
+    color: #b2bec3;
+    font-size: 2rem;
+    padding: 1rem 1rem;
+}
+
+.nav-links-2 li:hover {
+    transform: scale(1.8);
+    transition: scale 0.4s ease-in-out 0.2s;
+}
+
+
+/* Hamburger menu */
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #b2bec3;
+    border-radius: 10px;
+}
+
+/* Header */
+.background {
+    margin: 0;
+}
+
+/* Media queries */
+@media (max-width: 1005px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    
+    .nav-links-1 {
+       display: none;
+       width: 100%;
+    }
+
+    .nav-links-2 {
+          display: none; 
+          width: 100%;
+    }
+    
+
+    .navbar .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links-1 ul {
+        width: 100%;
+        flex-direction: column;
+         
+    }
+
+    .nav-links-1 li {
+        text-align: center;
+        margin: 1rem;   
+    }
+
+    .nav-links-2 ul {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links-2 li {
+        margin: 1rem;
+    }
+
+    .nav-links-1.active {
+        display: flex;
+    }
+
+    .nav-links-2.active {
+        display: flex;
+    }
+  
+}
