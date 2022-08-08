@@ -93,13 +93,55 @@ body {
     align-items: center
 }
 
+/* Section expanding cards */
+.expanding-cards .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    width: 90vw;
+    height: 90vh;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90vw;
+    margin: 10px;
+    flex: 0.5;
+    border-radius: 50px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+
+.panel h2 {
+    font-size: 34px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
 
 /* Media queries */
-@media (max-width: 1005px) {
+/* Media queries for navigation bar */
+@media (max-width: 1020px) {
     .toggle-button {
         display: flex;
     }
-
     
     .nav-links-1 {
        display: none;
@@ -111,7 +153,6 @@ body {
           width: 100%;
     }
     
-
     .navbar .container{
         flex-direction: column;
         align-items: flex-start;
@@ -148,7 +189,8 @@ body {
   
 }
 
-@media (max-width: 1050px){
+/* Media queries for header */
+@media (max-width: 1060px){
     .headliner img {
         width: 1000px;
         height: 600px;
@@ -171,3 +213,21 @@ body {
             transition: width 2s ease-in 0.4;
         }
     }
+
+/* Media queries for expanding cards */
+@media (max-width: 600px) {
+    .expanding-cards .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+    
+}
+
+/* Webkit to hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
