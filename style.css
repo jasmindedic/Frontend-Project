@@ -136,6 +136,11 @@ body {
     transition: opacity 0.3s ease-in 0.4s;
 }
 
+/* Footer */
+.footer .container {
+    background-image: url("/images/wave.jpg");
+}
+
 /* Media queries */
 /* Media queries for navigation bar */
 @media (max-width: 1020px) {
